@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.ko'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.ko"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'com.facebook.android:facebook-share:16.0.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.3'
+    def koin_v="3.2.0"
+    implementation "io.insert-koin:koin-android:$koin_v"
+    def ktor_v="1.6.3"
+    implementation "io.ktor:ktor-client-core:$ktor_v"
+    //implementation "io.ktor:ktor-client-cio:$ktor_v"
+    implementation "io.ktor:ktor-client-android:$ktor_v"
+    implementation "io.ktor:ktor-client-serialization:$ktor_v"
+    implementation "io.ktor:ktor-client-logging:$ktor_v"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json"
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

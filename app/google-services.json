@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "4343308401",
+    "project_id": "koapp-5dbb6",
+    "storage_bucket": "koapp-5dbb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4343308401:android:36e280cf8edcb9c734fbd0",
+        "android_client_info": {
+          "package_name": "com.example.ko"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqOkaTE8Qkk_h_66kChlVZEsdVsqCtELw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
